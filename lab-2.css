@@ -6,7 +6,7 @@ body{
 header{
     font-size:30px;
     height: 30px;
-    padding: 40px;
+    padding: 30px;
     padding-left:20;
     color: white;
     background: rgba(118,151,21,1);
@@ -27,7 +27,7 @@ nav a{
 nav {
     display: flex;
     justify-content: space-around;
-    
+
 }
 nav li:after{
     content: " ";
@@ -37,4 +37,24 @@ nav li:after{
 }
 nav li:last-child::after{
     content: none;
+}
+.text{
+    font-size: 12px;
+}
+.colortext{
+    color: #80a60f;
+}
+.Prob {
+    padding-left:30;
+}
+.Content{
+    padding-left:305;
+}
+.Conteiner{
+    background:#eeeefb;
+    height: 190px;
+}
+.Welcome{
+    font-size: 30px;
+    vertical-align:bottom;
 }
