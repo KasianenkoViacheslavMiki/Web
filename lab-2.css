@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap');
 body{
     width:675;
+    margin: 0px auto;
 }
 header{
-    font-family: 'Open Sans', sans-serif;
-    height: 80;
+    font-size:30px;
+    height: 30px;
+    padding: 40px;
     padding-left:20;
     color: white;
     background: rgba(118,151,21,1);
@@ -14,4 +16,25 @@ header{
     background: -ms-linear-gradient(top, rgba(118,151,21,1) 0%, rgba(153,204,1,1) 100%);
     background: linear-gradient(to bottom, rgba(118,151,21,1) 0%, rgba(153,204,1,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#769715', endColorstr='#99cc01', GradientType=0 );
+}
+nav li {
+    list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    
+}
+nav li:after{
+    content: " ";
+    background: url(arrow.png) center no-repeat;
+    padding:9px 9px 9px 9px;
+    margin-left: 30px;
+}
+nav li:last-child::after{
+    content: none;
 }
