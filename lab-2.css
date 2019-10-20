@@ -2,6 +2,7 @@
 body{
     width:675;
     margin: 0px auto;
+    color: #093500;
 }
 header{
     font-size:30px;
@@ -30,7 +31,7 @@ nav {
 
 }
 nav li:after{
-    content: " ";
+    content: "  ";
     background: url(arrow.png) center no-repeat;
     padding:9px 9px 9px 9px;
     margin-left: 30px;
@@ -57,4 +58,17 @@ nav li:last-child::after{
 .Welcome{
     font-size: 30px;
     vertical-align:bottom;
+}
+.Table{
+    vertical-align:text-top;
+    text-align:left;
+}
+.ContentAbout{
+    margin-left: 15px;
+    padding:9px 9px 9px 9px;
+    width:215;
+ 
+}
+.bigs{
+    font-size: 23px;
 }
