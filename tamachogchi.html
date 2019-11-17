@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Тамагочи</title>
+</head>
+<body>
+    <script src="tamachogchi.js"></script>
+    <b>Имя питомца:</b><div id="name"></div>
+    <b>Сытость:</b><div id="hunger">0</div>
+    <b>Чистота:</b><div id="purity">0</div>
+    <b>Радость:</b><div id="happiness">0</div>
+    <b>Бадьорість:</b><div id="fatigue">0</div>
+    <br>
+    <button type="button" onclick="Tamagochi.eat()"><img src="food.png" width="40" height="50" /></button>
+    <button type="button" onclick="Tamagochi.Walk()"><img src="walk.png" width="40" height="50" /></button>
+    <button type="button" onclick="Tamagochi.sleep()"><img src="sleep.png" width="40" height="50" /></button>
+    <button type="button" onclick="Tamagochi.wash()"><img src="wash.png" width="40" height="50" /></button>
+</body>
+<script>
+Tamagochi.Info();
+</script>
+</html>
