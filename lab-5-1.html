@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>LrVstavka</title>
+    </head>
+    <body>
+        <header>Laborator Vstavka</header>
+        <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ol>
+        <script>
+        var newLi = document.createElement("li");
+        newLi.appendChild(document.createTextNode("Новий елемент"));
+        let element = document.querySelector('ol > li:nth-child(6)');
+        element.parentElement.insertBefore(newLi, element);
+        </script>
+    </body>
+</html>

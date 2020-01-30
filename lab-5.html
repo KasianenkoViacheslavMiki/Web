@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>LrDOM</title>
+    </head>
+    <body>
+        <header>Laborator DOM</header>
+        <script>
+         var newh1 = document.createElement("h1");
+         newh1.innerHTML = "<h1>DOM</h1>";
+         newh1.id = "heading";
+         document.body.appendChild(newh1);
+         document.getElementById("heading").style.textAlign = "center";
+         document.getElementById("heading").style.color = "red";
+        </script>
+    </body>
+</html>
