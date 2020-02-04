@@ -4,8 +4,9 @@
     </head>
     <body>
         <header>Laborator Vstavka</header>
+        <div id="container"> </div>
         <script>
-    const data = {
+   const data = {
     tag: "div",
     id: "todo-list",
     className: "center",
@@ -68,9 +69,20 @@
     ]
 }
 
-       function render(date,conteiner){
-             document.createElement
-       }
+function render(data,container)
+{
+    var temp = document.createElement(data.tag);
+    if (!data.id==false){temp.setAttribute("id",data.id)}
+    if (!data.className==false){temp.setAttribute("className",data.className)}
+ 
+    container.appendChild(temp);
+    if ( !data.children==false ){    
+    data.children.forEach(child => {
+        render(child,temp);
+    });
+    }
+}
+render(data, document.getElementById("container"));
 
         </script>
     </body>
