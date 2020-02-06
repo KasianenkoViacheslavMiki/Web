@@ -70,18 +70,30 @@
 }
 
 function render(data,container)
-{
+{    
     var temp = document.createElement(data.tag);
-    if (!data.id==false){temp.setAttribute("id",data.id)}
+    if (typeof (data) == "string") {  
+        temp = document.createTextNode(data);
+    }
+  if (!data.id==false){temp.setAttribute("id",data.id)}
     if (!data.className==false){temp.setAttribute("className",data.className)}
- 
+    if (!data.attr== false){
+    var keysTemp = Object.keys(data.attr);
+    var valueTemp = Object.values(data.attr)
+    var count=0;
+    keysTemp.forEach(name => {
+        temp.setAttribute(name,valueTemp[count]);
+        count++;
+    });
+}
     container.appendChild(temp);
-    if ( !data.children==false ){    
+    if ( !data.children==false){    
     data.children.forEach(child => {
         render(child,temp);
     });
     }
 }
+
 render(data, document.getElementById("container"));
 
         </script>
