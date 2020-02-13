@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Button</title>
+    </head>
+    <body>
+        <header>Laborators</header>
+        <script>
+        function colorsContainer(target){
+            console.log(target);
+            target.target.style.backgroundColor="red";
+        }
+        var conteiner;
+        conteiner = document.createElement("div");
+        var button;
+        for (let i=0;i<5;i++){
+            button =document.createElement("button");
+            button.innerHTML=i+1;
+            conteiner.appendChild(button);
+        }
+        conteiner.addEventListener("click",colorsContainer);
+        document.body.appendChild(conteiner);
+        </script>
+    </body>
+</html>

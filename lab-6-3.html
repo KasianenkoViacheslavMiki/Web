@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Button</title>
+    </head>
+    <body>
+        <header>Laborators</header>
+        <script>
+        var conteiner = document.createElement("div"); 
+        document.body.appendChild(conteiner);
+        var input = document.createElement("input");
+        input.id="input";
+        conteiner.appendChild(input);
+        var button = document.createElement("button");
+        button.innerHTML= "Ввод";
+        conteiner.appendChild(button);
+        var ol = document.createElement("ol"); 
+        document.body.appendChild(ol);
+        function inputOL(){
+            var temp  = document.getElementById("input");
+            if (temp.value){
+            var newLi = document.createElement("li");
+            console.log(temp);
+            newLi.appendChild(document.createTextNode(temp.value));
+            temp.value="";
+            ol.appendChild(newLi);
+            }
+        }
+        var temp = document.getElementById("input");
+        function mouseOverLi(event){
+            console.log(event.target);
+            var conteiner  = event.target;
+            var temp  = document.getElementById("input");
+            temp.value = conteiner.innerHTML;
+        }
+        function mouseOutLi(event){
+            console.log(event.target);
+            var conteiner  = event.target;
+            var temp  = document.getElementById("input");
+            temp.value = conteiner.innerHTML;
+        }
+        button.addEventListener("click",inputOL);
+        ol.addEventListener("mouseover",mouseOverLi);
+        ol.addEventListener("mouseout",mouseOutLi);
+        </script>
+    </body>
+</html>

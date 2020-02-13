@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Button</title>
+    </head>
+    <body>
+        <header>Laborators</header>
+        <script>
+        var buttons = document.createElement("button");
+        function fClick(){alert("Hello");}
+        document.body.appendChild(buttons);
+        buttons.addEventListener("click",fClick);
+        var buttonsDead = document.createElement("button");
+        function fClickDead()
+            {
+            alert("Умер!");
+            buttonsDead.removeEventListener("click",fClickDead);
+            }
+        buttonsDead.addEventListener("click",fClickDead);
+        document.body.appendChild(buttonsDead);
+        
+        </script>
+    </body>
+</html>
