@@ -25,23 +25,36 @@
             ol.appendChild(newLi);
             }
         }
+        
         var InputText;
         function mouseOverLi(event){
-          //  console.log(event.target);
+         //  console.log(event.target);
+          if (event.target.tagName != "LI") return;
             var conteiner  = event.target;
             var temp  = document.getElementById("input");
             InputText= temp.value; 
-            console.log(InputText);
+         //   console.log(InputText);
             temp.value = conteiner.innerHTML;
         }
         function mouseOutLi(event){
+            if (event.target.tagName != "LI") return;
             var temp  = document.getElementById("input");
-            console.log(InputText);
+         //   console.log(InputText);
             temp.value = InputText;
         }
         button.addEventListener("click",inputOL);
         ol.addEventListener("mouseover",mouseOverLi);
         ol.addEventListener("mouseout",mouseOutLi);
+        function dragstartOL(event){
+            console.log(event);
+        } 
+        function dragoverOL(event){
+
+} 
+        function drop(event) {
+
+} 
+        ol.addEventListener("dragstart",dragstartOL);
         </script>
     </body>
 </html>
