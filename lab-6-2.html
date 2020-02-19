@@ -7,7 +7,8 @@
         <script>
         function colorsContainer(target){
             console.log(target);
-            target.target.style.backgroundColor="red";
+            if (target.target.tagName == "BUTTON") {
+            target.target.style.backgroundColor="red";}
         }
         var conteiner;
         conteiner = document.createElement("div");

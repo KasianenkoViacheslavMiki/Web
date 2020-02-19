@@ -19,24 +19,25 @@
             var temp  = document.getElementById("input");
             if (temp.value){
             var newLi = document.createElement("li");
-            console.log(temp);
+         //   console.log(temp);
             newLi.appendChild(document.createTextNode(temp.value));
             temp.value="";
             ol.appendChild(newLi);
             }
         }
-        var temp = document.getElementById("input");
+        var InputText;
         function mouseOverLi(event){
-            console.log(event.target);
+          //  console.log(event.target);
             var conteiner  = event.target;
             var temp  = document.getElementById("input");
+            InputText= temp.value; 
+            console.log(InputText);
             temp.value = conteiner.innerHTML;
         }
         function mouseOutLi(event){
-            console.log(event.target);
-            var conteiner  = event.target;
             var temp  = document.getElementById("input");
-            temp.value = conteiner.innerHTML;
+            console.log(InputText);
+            temp.value = InputText;
         }
         button.addEventListener("click",inputOL);
         ol.addEventListener("mouseover",mouseOverLi);
