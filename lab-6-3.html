@@ -46,7 +46,8 @@
         ol.addEventListener("mouseover",mouseOverLi);
         ol.addEventListener("mouseout",mouseOutLi);
         function dragstartOL(event){
-            console.log(event);
+            var index = event.target.index;
+            console.log(index);
         } 
         function dragoverOL(event){
 

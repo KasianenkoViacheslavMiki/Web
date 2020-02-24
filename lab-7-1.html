@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+ <table border="1" id="container"></table>
+ 
+<script>
+    var table = document.getElementById("container");
+fetch('https://ghibliapi.herokuapp.com/films').then(response=>response.json()).then(data=>{
+    var rowHeaders = document.createElement("tr");
+    var keysTemps = Object.keys(data[0]);
+    keysTemps.forEach(keysColum=>{
+    
+    if (keysColum == "title" || keysColum =="description"|| keysColum== "director"|| keysColum== "producer"|| keysColum== "release_date"){
+        var column = document.createElement("th");
+            column.appendChild(document.createTextNode(keysColum));
+            rowHeaders.appendChild(column);
+            table.appendChild(rowHeaders);
+            }
+    })
+    data.forEach(element => {
+      //  console.log(element);
+        var row = document.createElement("tr");
+        var keysTemp = Object.keys(element);
+        
+        var valueTemp = Object.values(element)
+        var count=0;
+        keysTemp.forEach(elementColum=>{
+            if (elementColum == "title" || elementColum =="description"|| elementColum== "director"|| elementColum== "producer"|| elementColum== "release_date"){
+           //console.log(elementColum);
+            var column = document.createElement("td");
+            column.appendChild(document.createTextNode(valueTemp[count]));
+            row.appendChild(column)}
+            count++;
+        })
+       table.appendChild(row);
+    });
+   // console.log(data);
+})
+</script>
+</body>
+</html>
