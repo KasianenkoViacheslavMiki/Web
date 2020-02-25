@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <table border="1" id="container"></table>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"> </script>
+    <script>
+      var table = document.getElementById("container");
+        axios.get('https://api.github.com/users/MikiDJ/repos')
+       .then((response)=>{
+            console.log(response.data);
+       })
+    
+
+    </script>
+</body>
+
+</html>
